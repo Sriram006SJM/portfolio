@@ -319,8 +319,35 @@
     @media (max-width: 640px) {
       .projects-grid { grid-template-columns: 1fr; }
       .edu-header { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+
+      /* Timeline mobile */
+      .timeline::before { left: 14px; }
+      .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        padding-left: 2.5rem;
+      }
+      .timeline-dot {
+        left: 7px !important;
+        right: auto !important;
+        transform: none !important;
+        top: 1.5rem;
+      }
+      .timeline-item:nth-child(odd):hover { transform: translateX(2px); }
+      .timeline-item:nth-child(even):hover { transform: translateX(2px); }
+
+      /* Hero mobile */
+      .hero-name { font-size: clamp(2rem, 8vw, 3rem); }
+      .hero-badges { flex-direction: column; align-items: center; gap: 0.5rem; }
+      .hero-cta { flex-direction: column; align-items: center; }
+
+      /* Skills mobile */
+      .skills-grid { grid-template-columns: 1fr; }
+
+      /* Section padding mobile */
+      .section { padding: 60px 0; }
+      .container { padding: 0 1.2rem; }
     }
-    /* TODO(Task 7): add mobile responsive styles for .timeline */
 
     /* ── Projects ────────────────────────────────────────────── */
     .projects-grid {
@@ -609,7 +636,7 @@
         <span class="badge gold"><i class="fa-solid fa-award"></i> Dean's Excellence Scholar</span>
       </div>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/sriram-ganeshalingam" target="_blank">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/sriram-ganeshalingam" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
         <a class="btn btn-outline" href="mailto:sriram.ganeshalingam@utdallas.edu">
