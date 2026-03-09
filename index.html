@@ -245,7 +245,7 @@
       tw.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
       let delay = deleting ? 60 : 100;
       if (!deleting && ci > word.length) { delay = 1800; deleting = true; }
-      if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; delay = 300; }
+      if (deleting && ci <= 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; delay = 300; }
       setTimeout(type, delay);
     }
     type();
