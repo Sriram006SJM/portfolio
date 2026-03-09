@@ -170,6 +170,39 @@
       animation: bounce 2s ease-in-out infinite;
     }
     @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(6px);} }
+    /* ── Skills ──────────────────────────────────────────────── */
+    #skills { background: var(--bg2); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .skill-group {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .skill-group-title {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: 20px;
+    }
+    .skill-item { margin-bottom: 16px; }
+    .skill-label {
+      display: flex; justify-content: space-between;
+      font-size: 0.875rem; color: var(--text); margin-bottom: 6px;
+    }
+    .skill-label span { color: var(--muted); font-size: 0.8rem; }
+    .skill-bar {
+      height: 6px; background: rgba(255,255,255,0.06);
+      border-radius: 3px; overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%; border-radius: 3px; width: 0;
+      background: linear-gradient(90deg, var(--teal), var(--gold));
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
   </style>
 </head>
 <body>
@@ -216,6 +249,99 @@
       </div>
     </div>
     <div class="scroll-hint"><i class="fa-solid fa-chevron-down"></i></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-group fade-in">
+          <div class="skill-group-title"><i class="fa-solid fa-database"></i> SQL & Databases</div>
+          <div class="skill-item">
+            <div class="skill-label">PostgreSQL (CTEs, Window Functions) <span>Expert</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">MySQL <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Snowflake <span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Query Optimization <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in">
+          <div class="skill-group-title"><i class="fa-solid fa-chart-bar"></i> Analytics & BI</div>
+          <div class="skill-item">
+            <div class="skill-label">Tableau <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Power BI <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Excel (Advanced) <span>Expert</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Dashboard Development <span>Expert</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in">
+          <div class="skill-group-title"><i class="fa-brands fa-python"></i> Programming</div>
+          <div class="skill-item">
+            <div class="skill-label">Python (Pandas, NumPy) <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Machine Learning (XGBoost, TF) <span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">R <span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">ETL & Data Pipelines <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in">
+          <div class="skill-group-title"><i class="fa-solid fa-briefcase"></i> Product & Strategy</div>
+          <div class="skill-item">
+            <div class="skill-label">KPI Definition & Roadmaps <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:84%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Stakeholder Communication <span>Expert</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Agile / Scrum (JIRA) <span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:86%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Root Cause Analysis <span>Expert</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:93%"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- SECTIONS WILL BE ADDED IN SUBSEQUENT TASKS -->
