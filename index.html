@@ -645,6 +645,34 @@
       transition: color 0.2s, border-color 0.2s;
     }
     .project-github:hover { color: var(--teal); border-color: var(--teal); text-decoration: none; }
+    .project-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--teal);
+      text-decoration: none;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid rgba(0,212,255,0.4);
+      width: fit-content;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .project-live:hover { background: rgba(0,212,255,0.1); border-color: var(--teal); text-decoration: none; }
+    .project-link-row {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .project-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
     .tech-tag {
       font-size: 0.72rem;
       font-weight: 500;
@@ -1187,6 +1215,7 @@
 
         <!-- Card 3: Conagra Hackathon -->
         <div class="project-card">
+          <img src="conagra.png" alt="Conagra Brands — gardein plant-based products" class="project-img" />
           <h3 class="project-title">Predictive Sales Forecasting</h3>
           <p class="project-desc">Conagra Hackathon — plant-based product sales forecasting with executive dashboards for strategic decision-making.</p>
           <ul class="project-highlights" role="list">
@@ -1200,13 +1229,16 @@
             <span class="tech-tag">Predictive Modeling</span>
             <span class="tech-tag">Executive Reporting</span>
           </div>
-          <a href="https://github.com/Sriram006SJM/CONAGRA" target="_blank" rel="noopener noreferrer" class="project-github"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
+          <div class="project-link-row">
+            <a href="https://github.com/Sriram006SJM/CONAGRA" target="_blank" rel="noopener noreferrer" class="project-github"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
+          </div>
         </div>
 
-        <!-- Card 4: Mr. Cooper Housing Analytics -->
+        <!-- Card 4: SmartSell — Mr. Cooper Housing Analytics -->
         <div class="project-card">
-          <h3 class="project-title">Mr. Cooper Housing Analytics</h3>
-          <p class="project-desc">AI-driven real estate decision platform delivering a 35% improvement in predictive accuracy for housing market analysis.</p>
+          <img src="smartsell.png" alt="SmartSell — Revolutionizing the Home Buying &amp; Selling Experience" class="project-img" />
+          <h3 class="project-title">SmartSell — Housing Analytics</h3>
+          <p class="project-desc">AI-driven real estate decision platform (Mr. Cooper) delivering a 35% improvement in predictive accuracy for housing market analysis.</p>
           <ul class="project-highlights" role="list">
             <li>35% accuracy improvement over baseline models</li>
             <li>Regression and predictive analytics on housing market datasets</li>
@@ -1219,7 +1251,10 @@
             <span class="tech-tag">Regression</span>
             <span class="tech-tag">Data Schemas</span>
           </div>
-          <a href="https://github.com/Sriram006SJM/MetroAnalysis-RealEstate" target="_blank" rel="noopener noreferrer" class="project-github"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
+          <div class="project-link-row">
+            <a href="https://smartsell-app.vercel.app" target="_blank" rel="noopener noreferrer" class="project-live"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+            <a href="https://github.com/Sriram006SJM/MetroAnalysis-RealEstate" target="_blank" rel="noopener noreferrer" class="project-github"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
+          </div>
         </div>
 
         <!-- Card 5: IBM HR Database Project -->
