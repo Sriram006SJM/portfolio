@@ -593,6 +593,86 @@
     }
 
     /* ── Footer ──────────────────────────────────────────────── */
+    /* ── Hackathons ── */
+    .hackathons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .hack-card {
+      background: rgba(0,212,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .hack-card:hover { transform: translateY(-4px); border-color: var(--teal); }
+    .hack-card--winner {
+      border-color: rgba(240,192,64,0.4);
+      background: rgba(240,192,64,0.04);
+    }
+    .hack-card--winner:hover { border-color: var(--gold); }
+    .hack-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+      background: rgba(240,192,64,0.15);
+      border: 1px solid rgba(240,192,64,0.4);
+      color: var(--gold);
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .hack-title { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .hack-org { font-size: 0.82rem; color: var(--teal); font-weight: 500; }
+    .hack-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .hack-team { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+
+    /* ── Certifications ── */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .cert-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(0,212,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.3rem;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .cert-card:hover { transform: translateX(4px); border-color: var(--teal); }
+    .cert-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .cert-icon--snowflake { background: rgba(0,212,255,0.12); color: var(--teal); }
+    .cert-icon--datacamp  { background: rgba(3,190,120,0.12); color: #03be78; }
+    .cert-icon--capgemini { background: rgba(240,192,64,0.12); color: var(--gold); }
+    .cert-name   { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 0.15rem; }
+    .cert-issuer { font-size: 0.8rem; color: var(--teal); font-weight: 500; margin-bottom: 0.1rem; }
+    .cert-dates  { font-size: 0.75rem; color: var(--muted); }
+
+    @media (max-width: 640px) {
+      .hackathons-grid { grid-template-columns: 1fr; }
+      .certs-grid { grid-template-columns: 1fr; }
+    }
+
     .footer {
       padding: 2rem 0;
       border-top: 1px solid var(--border);
@@ -614,7 +694,9 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#hackathons">Hackathons</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -882,6 +964,42 @@
     </div>
   </section>
 
+  <!-- HACKATHONS -->
+  <section id="hackathons" class="section fade-in">
+    <div class="container">
+      <h2 class="section-title">Hackathons &amp; Competitions</h2>
+      <div class="hackathons-grid">
+
+        <div class="hack-card hack-card--winner">
+          <div class="hack-badge"><i class="fas fa-trophy" aria-hidden="true"></i> 3rd Place</div>
+          <h3 class="hack-title">LSEG Data &amp; Analytics Competition</h3>
+          <div class="hack-org"><i class="fas fa-building" aria-hidden="true"></i> London Stock Exchange Group (LSEG) &nbsp;·&nbsp; JSOM Finance Lab, UTD</div>
+          <p class="hack-desc">Competed in a data analytics case competition focused on financial market analysis. Delivered insights on trading data with dashboards and predictive modeling, earning 3rd place out of all participating teams.</p>
+          <div class="hack-team"><i class="fas fa-users" aria-hidden="true"></i> Team: Nathan Bucasas, Debasmita Ray, Sriram Ganeshalingam</div>
+          <div class="tech-tags" style="margin-top:0.8rem">
+            <span class="tech-tag">Financial Analytics</span>
+            <span class="tech-tag">Data Visualization</span>
+            <span class="tech-tag">Predictive Modeling</span>
+          </div>
+        </div>
+
+        <div class="hack-card">
+          <h3 class="hack-title">Crowe Spring 2025 National Case Competition</h3>
+          <div class="hack-org"><i class="fas fa-building" aria-hidden="true"></i> Crowe LLP &nbsp;·&nbsp; Team: Data Sharks</div>
+          <p class="hack-desc">Designed "FinBright" — a mobile-first fintech platform improving financial literacy and inclusion among underserved young adults. Focused on chatbot-guided financial coaching, gamified learning modules, bilingual content, and community partnerships for trust-building.</p>
+          <div class="hack-team"><i class="fas fa-users" aria-hidden="true"></i> Team: Sriram Ganeshalingam, Shreya Raghunath, Sanjay Dilip</div>
+          <div class="tech-tags" style="margin-top:0.8rem">
+            <span class="tech-tag">Fintech</span>
+            <span class="tech-tag">Product Design</span>
+            <span class="tech-tag">Financial Inclusion</span>
+            <span class="tech-tag">Community Strategy</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- EDUCATION -->
   <section id="education" class="section fade-in">
     <div class="container">
@@ -913,6 +1031,52 @@
           <span class="course-chip">Machine Learning</span>
           <span class="course-chip">Statistical Modeling</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section fade-in">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--snowflake"><i class="fas fa-snowflake" aria-hidden="true"></i></div>
+          <div class="cert-body">
+            <div class="cert-name">SnowPro Associate — Platform</div>
+            <div class="cert-issuer">Snowflake</div>
+            <div class="cert-dates">Issued Jul 2025 &nbsp;·&nbsp; Expires Aug 2027</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--datacamp"><i class="fas fa-code" aria-hidden="true"></i></div>
+          <div class="cert-body">
+            <div class="cert-name">Introduction to R</div>
+            <div class="cert-issuer">DataCamp</div>
+            <div class="cert-dates">Issued Aug 2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--datacamp"><i class="fas fa-code" aria-hidden="true"></i></div>
+          <div class="cert-body">
+            <div class="cert-name">Intermediate R</div>
+            <div class="cert-issuer">DataCamp</div>
+            <div class="cert-dates">Issued Aug 2024</div>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--capgemini"><i class="fas fa-leaf" aria-hidden="true"></i></div>
+          <div class="cert-body">
+            <div class="cert-name">Sustainability Awareness</div>
+            <div class="cert-issuer">Capgemini</div>
+            <div class="cert-dates">Certificate of Completion</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
