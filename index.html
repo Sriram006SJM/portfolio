@@ -673,6 +673,56 @@
       border-radius: 10px;
       border: 1px solid var(--border);
     }
+    /* ── Screenshot Carousel ────────────────────────────────── */
+    .carousel {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+    .carousel-track img {
+      min-width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10,15,30,0.7);
+      border: 1px solid var(--border);
+      color: var(--teal);
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+      z-index: 2;
+    }
+    .carousel-btn:hover { background: rgba(0,212,255,0.15); }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+    .carousel-dots {
+      position: absolute;
+      bottom: 8px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; gap: 6px;
+    }
+    .carousel-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .carousel-dot.active { background: var(--teal); }
     .tech-tag {
       font-size: 0.72rem;
       font-weight: 500;
@@ -1173,6 +1223,23 @@
           <span class="project-badge"><i class="fas fa-star"></i> Featured Project</span>
           <h3 class="project-title">Real Estate AI Platform</h3>
           <p class="project-desc">Full-stack AI platform for property investment decision support with live market data ingestion, multi-agent LLM analysis, and Bayesian synthesis engine.</p>
+
+          <!-- Screenshot carousel -->
+          <div class="carousel" id="re-carousel">
+            <div class="carousel-track" id="re-track">
+              <img src="realestate-3.jpeg" alt="Composed Analysis — offer target $269,425 · 76% confidence" />
+              <img src="realestate-1.jpeg" alt="Market Intelligence Charts — appreciation forecast and mortgage rate" />
+              <img src="realestate-2.jpeg" alt="Property Value Projection — Monte Carlo p10/p50/p90 bands" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous" onclick="reCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next" aria-label="Next" onclick="reCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots" id="re-dots">
+              <span class="carousel-dot active" onclick="reCarouselTo(0)"></span>
+              <span class="carousel-dot" onclick="reCarouselTo(1)"></span>
+              <span class="carousel-dot" onclick="reCarouselTo(2)"></span>
+            </div>
+          </div>
+
           <ul class="project-highlights" role="list">
             <li>4 API versions (V1–V4) with 38 passing tests and daily live data ingestion (6.6M rows)</li>
             <li>HomeEquity AI module with Early Payoff Calculator and Monte Carlo scenario engine</li>
@@ -1554,6 +1621,17 @@
         setTimeout(() => r.remove(), 600);
       });
     });
+
+    // ── Real Estate carousel ──────────────────────────────────────
+    let reIdx = 0;
+    const reTotal = 3;
+    function reCarouselTo(i) {
+      reIdx = (i + reTotal) % reTotal;
+      document.getElementById('re-track').style.transform = `translateX(-${reIdx * 100}%)`;
+      document.querySelectorAll('#re-dots .carousel-dot').forEach((d, j) => d.classList.toggle('active', j === reIdx));
+    }
+    function reCarousel(dir) { reCarouselTo(reIdx + dir); }
+    setInterval(() => reCarousel(1), 4000);
 
     // ── 3D card tilt ──────────────────────────────────────────────
     document.querySelectorAll('.project-card, .hack-card, .cert-card').forEach(card => {
