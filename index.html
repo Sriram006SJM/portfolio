@@ -843,6 +843,15 @@
     #contact {
       text-align: center;
     }
+    .about-text {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 820px;
+    }
+    .about-text strong { color: var(--text); }
+    .skills-extra { margin-top: 2rem; }
+    .skills-extra .coursework-label { margin-bottom: 0.8rem; }
     .contact-sub {
       color: var(--muted);
       font-size: 1rem;
@@ -992,6 +1001,7 @@
     <div class="container nav-inner">
       <span class="nav-logo">SG.</span>
       <ul class="nav-links">
+        <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -1005,6 +1015,7 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobile()">About</a>
       <a href="#skills" onclick="closeMobile()">Skills</a>
       <a href="#experience" onclick="closeMobile()">Experience</a>
       <a href="#projects" onclick="closeMobile()">Projects</a>
@@ -1032,8 +1043,9 @@
       </p>
       <div class="hero-badges">
         <span class="badge"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> MS @ UT Dallas</span>
-        <span class="badge gold"><i class="fa-solid fa-star" aria-hidden="true"></i> GPA 3.92</span>
+        <span class="badge gold"><i class="fa-solid fa-star" aria-hidden="true"></i> GPA 3.89 · Summa Cum Laude</span>
         <span class="badge gold"><i class="fa-solid fa-award" aria-hidden="true"></i> Dean's Excellence Scholar</span>
+        <span class="badge"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dallas, TX</span>
       </div>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://www.linkedin.com/in/sriram-ganeshalingam" target="_blank" rel="noopener noreferrer">
@@ -1078,7 +1090,7 @@
           <div class="stat-label">Monte Carlo Simulations</div>
         </div>
         <div class="stat-item">
-          <span class="stat-num-big gold" data-target="3.92">0</span>
+          <span class="stat-num-big gold" data-target="3.89">0</span>
           <div class="stat-label">GPA</div>
         </div>
         <div class="stat-item">
@@ -1088,6 +1100,15 @@
       </div>
     </div>
   </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section fade-in">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="section-line"></div>
+      <p class="about-text">Results-driven Analyst with <strong>3+ years of experience</strong> spanning business intelligence, data analytics, data engineering, and software development. I hold a <strong>Master’s in Business Analytics &amp; Artificial Intelligence from UT Dallas</strong>, with expertise in SQL, Python, R, Spark, Power BI, Tableau, and data warehousing technologies. I turn complex datasets into actionable business insights through KPI dashboards, automated data pipelines, data quality validation, and predictive analytics, and I work across teams to translate business requirements into scalable, data-driven solutions that support strategic decision-making.</p>
+    </div>
+  </section>
 
   <!-- SKILLS -->
   <section id="skills" class="section">
@@ -1100,22 +1121,22 @@
 
         <!-- SQL & Databases -->
         <div class="skill-group fade-in">
-          <div class="skill-group-title"><i class="fa-solid fa-database"></i> SQL & Databases</div>
+          <div class="skill-group-title"><i class="fa-solid fa-database"></i> SQL & Data Warehousing</div>
           <div class="skill-item">
             <div class="skill-label">SQL (CTEs, Window Functions, Optimization) <span>Proficient</span></div>
             <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-label">PostgreSQL <span>Proficient</span></div>
+            <div class="skill-label">PostgreSQL / MySQL <span>Proficient</span></div>
             <div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-label">MySQL <span>Familiar</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div>
+            <div class="skill-label">Snowflake (SnowPro Certified) <span>Familiar</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-label">Snowflake <span>Beginner</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:30%"></div></div>
+            <div class="skill-label">BigQuery <span>Familiar</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div>
           </div>
         </div>
 
@@ -1186,44 +1207,58 @@
         <div class="skill-group fade-in">
           <div class="skill-group-title"><i class="fa-solid fa-gears"></i> Data Engineering</div>
           <div class="skill-item">
-            <div class="skill-label">ETL & Data Pipelines <span>Proficient</span></div>
+            <div class="skill-label">ETL / ELT & Data Pipelines <span>Proficient</span></div>
             <div class="skill-bar"><div class="skill-fill" style="--w:68%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-label">Data Cleaning & Validation <span>Proficient</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+            <div class="skill-label">Data Quality Validation & Reconciliation <span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Data Modeling & Schema Design <span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Apache Spark <span>Familiar</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:48%"></div></div>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-group fade-in">
+          <div class="skill-group-title"><i class="fa-solid fa-cloud"></i> Cloud & DevOps</div>
+          <div class="skill-item">
+            <div class="skill-label">AWS <span>Familiar</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:48%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">GCP (Dataflow, Apache Beam, Cloud Functions) <span>Familiar</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div>
           </div>
           <div class="skill-item">
             <div class="skill-label">Docker <span>Familiar</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:44%"></div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:50%"></div></div>
           </div>
           <div class="skill-item">
-            <div class="skill-label">Data Migration & Integration <span>Proficient</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div>
+            <div class="skill-label">Git & CI/CD <span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:62%"></div></div>
           </div>
         </div>
 
-        <!-- Product & Strategy -->
-        <div class="skill-group fade-in">
-          <div class="skill-group-title"><i class="fa-solid fa-briefcase"></i> Product & Strategy</div>
-          <div class="skill-item">
-            <div class="skill-label">Agile / Scrum & JIRA <span>Advanced</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">Stakeholder Communication <span>Advanced</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">Root Cause Analysis <span>Advanced</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:84%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-label">KPI Definition & Reporting <span>Advanced</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
-          </div>
-        </div>
+      </div>
 
+      <div class="skills-extra fade-in">
+        <div class="coursework-label">Business &amp; Collaboration</div>
+        <div class="coursework-chips">
+          <span class="course-chip">Business Requirements Analysis</span>
+          <span class="course-chip">KPI Definition &amp; Reporting</span>
+          <span class="course-chip">Root-Cause Analysis</span>
+          <span class="course-chip">Agile / Scrum</span>
+          <span class="course-chip">Jira</span>
+          <span class="course-chip">Stakeholder Communication</span>
+          <span class="course-chip">Cross-Functional Collaboration</span>
+          <span class="course-chip">Data Migration &amp; Integration</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1235,7 +1270,42 @@
       <div class="section-line"></div>
       <div class="timeline">
 
-        <!-- Item 1: Capgemini (odd — left) -->
+        <!-- Item 1: KGS Technology Group (odd — left) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2026 – Present</div>
+          <div class="timeline-role">Data Engineer Intern</div>
+          <div class="timeline-company">KGS Technology Group, Inc.</div>
+          <ul class="timeline-bullets" role="list">
+            <li>Built and validated nightly multi-source data workflows, implementing reconciliation and automated data-quality checks that reduced data errors by 20% and improved downstream reporting reliability.</li>
+            <li>Investigated source-to-target data discrepancies and partnered with technical teams to identify root causes, validate source-of-truth data, and deliver reliable datasets for forecasting and operational decision-making.</li>
+          </ul>
+          <div class="metrics-row">
+            <span class="metric-chip">20% Fewer Data Errors</span>
+            <span class="metric-chip">Data Reconciliation</span>
+            <span class="metric-chip">Data Quality</span>
+          </div>
+        </div>
+
+        <!-- Item 2: Uni Quest (even — right) -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May 2026 – Jul 2026</div>
+          <div class="timeline-role">Data Analyst Intern</div>
+          <div class="timeline-company">Uni Quest</div>
+          <ul class="timeline-bullets" role="list">
+            <li>Developed Firebase/Firestore analytical workflows to capture and segment product activity across quizzes, rewards, and user interactions, creating reliable event-level datasets for behavioral analysis.</li>
+            <li>Designed automated logic to identify users inactive for 12+ hours and trigger deduplicated re-engagement workflows, eliminating manual intervention and improving workflow reliability.</li>
+            <li>Designed a transactional rewards data model with auditability and validation controls, improving the reliability of product usage and rewards metrics.</li>
+          </ul>
+          <div class="metrics-row">
+            <span class="metric-chip">Firebase / Firestore</span>
+            <span class="metric-chip">Event Analytics</span>
+            <span class="metric-chip">Data Modeling</span>
+          </div>
+        </div>
+
+        <!-- Item 3: Capgemini (odd — left) -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">Jun 2022 – Jul 2024</div>
@@ -1245,34 +1315,35 @@
           </div>
           <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Chennai, India</div>
           <ul class="timeline-bullets" role="list">
-            <li>Built ETL pipelines and Power BI dashboards using PostgreSQL and Fivetran/HVR, processing 500K+ daily records and reducing reporting latency by 20%.</li>
-            <li>Automated data validation logic across ingestion pipelines using custom reconciliation checks, cutting data quality errors.</li>
-            <li>Ran root cause analysis on data discrepancies using SQL queries and schema mapping, reducing stakeholder clarification cycles by 25%.</li>
-            <li>Developed a reusable SQL reporting layer with standardized CTEs and dimensional models across client datasets, reducing report build time for new requests from days to hours.</li>
-            <li>Containerized dev environments and migrated UI components using Docker and Git, improving deployment reliability.</li>
+            <li>Built data-validation, reconciliation, and QA checks across ingestion and application workflows, reducing data-quality errors by approximately 30% and improving the reliability of downstream operational reporting.</li>
+            <li>Supported enterprise rail and metro operational software systems, using SQL/PostgreSQL, C#, Docker, virtual machines, and Linux environments to investigate application and data issues and maintain reliable system operations.</li>
+            <li>Performed root-cause analysis across application, database, deployment, and infrastructure layers, partnering with engineering, QA, project management, and client teams to identify failures and implement corrective solutions.</li>
+            <li>Contributed to software and infrastructure modernization initiatives, including SVN-to-Git migration, PostgreSQL/C# application changes, CentOS platform upgrades, and deployment workflow improvements.</li>
           </ul>
           <div class="metrics-row">
+            <span class="metric-chip">~30% Fewer Data Errors</span>
             <span class="metric-chip">PostgreSQL</span>
-            <span class="metric-chip">Fivetran/HVR</span>
-            <span class="metric-chip">Power BI</span>
+            <span class="metric-chip">C#</span>
             <span class="metric-chip">Docker</span>
+            <span class="metric-chip">Linux</span>
             <span class="metric-chip">Git</span>
           </div>
         </div>
 
-        <!-- Item 2: Cango Networks (even — right) -->
+        <!-- Item 4: Cango Networks (even — right) -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-date">Sep 2021 – Mar 2022</div>
-          <div class="timeline-role">Software Developer</div>
+          <div class="timeline-role">Software Engineer</div>
           <div class="timeline-company">Cango Networks</div>
           <div class="timeline-location"><i class="fa-solid fa-location-dot"></i> Chennai, India</div>
           <ul class="timeline-bullets" role="list">
-            <li>Built Tableau dashboards using ETL pipelines replacing manual spreadsheets, cutting company-wide reporting effort by 30%.</li>
-            <li>Translated business reporting requirements into SQL pipelines and validation checks, ensuring clean and consistent data across all stakeholder reports.</li>
+            <li>Built ETL workflows to extract, clean, transform, and integrate network performance data from multiple sources, converting operational requirements into structured, analysis-ready datasets.</li>
+            <li>Developed Power BI and Tableau dashboards to analyze network performance KPIs and trends, enabling stakeholders to identify performance issues and make data-driven operational decisions.</li>
           </ul>
           <div class="metrics-row">
-            <span class="metric-chip">30% Less Manual Reporting</span>
+            <span class="metric-chip">ETL</span>
+            <span class="metric-chip">Power BI</span>
             <span class="metric-chip">Tableau</span>
             <span class="metric-chip">SQL</span>
           </div>
@@ -1316,6 +1387,8 @@
             <li>HomeEquity AI module with Early Payoff Calculator and Monte Carlo scenario engine</li>
             <li>Multi-agent LLM pipeline (Research → Risk → Consultant) with Bayesian decision synthesis</li>
             <li>Angular 17 frontend with real-time WebSocket dashboard and auto-refresh badges</li>
+            <li>Regression, Bayesian, and Monte Carlo models quantifying property value, rental performance, market uncertainty, and investment risk</li>
+            <li>Multi-factor decision framework combining property, cash-flow, market, locality, macroeconomic, and risk variables to optimize investment decisions</li>
           </ul>
           <div class="tech-tags">
             <span class="tech-tag">FastAPI</span>
@@ -1355,18 +1428,19 @@
         <!-- Card 3: Conagra Hackathon -->
         <div class="project-card">
           <img src="conagra.png" alt="Conagra Brands — gardein plant-based products" class="project-img" />
-          <h3 class="project-title">Predictive Sales Forecasting</h3>
-          <p class="project-desc">Conagra Hackathon — plant-based product sales forecasting with executive dashboards for strategic decision-making.</p>
+          <h3 class="project-title">Retail Demand &amp; Merchandising Analytics</h3>
+          <p class="project-desc">Conagra Brands Hackathon (Runner-Up, 2nd of all teams): retail demand forecasting and merchandising analytics on raw Conagra records.</p>
           <ul class="project-highlights" role="list">
-            <li>Built predictive models for plant-based product category sales</li>
-            <li>Designed executive Tableau dashboards for C-suite reporting</li>
-            <li>Delivered actionable forecasts used in product strategy planning</li>
+            <li>Built a retail forecasting model using Python regression and time-series to isolate category- and product-level demand</li>
+            <li>Tested relationships between product characteristics and demand, translating results into data-driven merchandising recommendations</li>
+            <li>Defined merchandising and demand KPIs and built Tableau dashboards to monitor product performance, demand patterns, and key sales drivers</li>
           </ul>
           <div class="tech-tags">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Tableau</span>
             <span class="tech-tag">Predictive Modeling</span>
-            <span class="tech-tag">Executive Reporting</span>
+            <span class="tech-tag">Time-Series</span>
+            <span class="tech-tag">KPI Development</span>
           </div>
           <div class="project-link-row">
             <a href="https://github.com/Sriram006SJM/CONAGRA" target="_blank" rel="noopener noreferrer" class="project-github"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>
@@ -1454,7 +1528,7 @@
 
         <div class="hack-card hack-card--winner" style="grid-column: 1 / -1;">
           <img src="conagra.png" alt="Conagra Brands — gardein plant-based products" class="project-img" style="height:220px;object-fit:cover;margin-bottom:0.5rem;" />
-          <div class="hack-badge"><i class="fas fa-medal" aria-hidden="true"></i> Runner-Up &nbsp;·&nbsp; Top 3</div>
+          <div class="hack-badge"><i class="fas fa-medal" aria-hidden="true"></i> Runner-Up &nbsp;·&nbsp; 2nd Place</div>
           <h3 class="hack-title">Conagra Brands Semester-Long Hackathon</h3>
           <div class="hack-org"><i class="fas fa-building" aria-hidden="true"></i> Conagra Brands &nbsp;·&nbsp; University of Texas at Dallas</div>
           <p class="hack-desc">Analyzed a large-scale Conagra dataset to build a predictive model forecasting unit sales for plant-based products, and proposed data-driven marketing strategies. Balanced final exams with late-night modeling sessions across an entire semester to finish as Runner-Up among all competing teams.</p>
@@ -1510,12 +1584,14 @@
             <div class="edu-meta">Aug 2024 – Dec 2025 · Richardson, TX</div>
           </div>
           <div class="edu-gpa">
-            <div class="gpa-number">3.92</div>
+            <div class="gpa-number">3.89</div>
             <div class="gpa-label">GPA</div>
           </div>
         </div>
         <div class="edu-badges">
+          <span class="edu-badge"><i class="fas fa-medal" aria-hidden="true"></i> Summa Cum Laude · High Distinction</span>
           <span class="edu-badge"><i class="fas fa-award" aria-hidden="true"></i> Dean's Excellence Scholar</span>
+          <span class="edu-badge"><i class="fas fa-snowflake" aria-hidden="true"></i> Snowflake Certified</span>
           <span class="edu-badge"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Top 5% Cohort</span>
         </div>
         <div class="coursework-label">Relevant Coursework</div>
@@ -1525,11 +1601,11 @@
           <span class="course-chip">Predictive Analytics</span>
           <span class="course-chip">Big Data</span>
           <span class="course-chip">Data Visualization</span>
-          <span class="course-chip">Machine Learning</span>
+          <span class="course-chip">Applied Machine Learning</span>
           <span class="course-chip">Statistical Modeling</span>
           <span class="course-chip">Deep Learning</span>
           <span class="course-chip">Advanced Statistics</span>
-          <span class="course-chip">Causal A/B Testing</span>
+          <span class="course-chip">Causal Analytics (A/B Testing)</span>
           <span class="course-chip">Business Analytics with R</span>
           <span class="course-chip">Programming for Data Science</span>
         </div>
@@ -1538,14 +1614,20 @@
       <div class="edu-card" style="margin-top: 1.5rem;">
         <div class="edu-header">
           <div>
-            <div class="edu-degree">BE in Electrical, Electronics &amp; Communications Engineering</div>
-            <div class="edu-school">College of Engineering, Guindy</div>
-            <div class="edu-meta">2017 – 2021 · Chennai, India</div>
+            <div class="edu-degree">BE in Electronics &amp; Communication Engineering</div>
+            <div class="edu-school">Anna University (College of Engineering, Guindy)</div>
+            <div class="edu-meta">Aug 2017 – Dec 2021 · Chennai, India</div>
           </div>
           <div class="edu-gpa">
             <div class="gpa-number">3.1</div>
             <div class="gpa-label">GPA</div>
           </div>
+        </div>
+        <div class="coursework-label">Relevant Coursework</div>
+        <div class="coursework-chips">
+          <span class="course-chip">Data Structures &amp; Algorithms</span>
+          <span class="course-chip">C / C++ Programming</span>
+          <span class="course-chip">Python Programming</span>
         </div>
       </div>
 
@@ -1603,7 +1685,7 @@
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <div class="section-line"></div>
-      <p class="contact-sub">Open to data analyst, data scientist, and BI engineering roles. Let's connect.</p>
+      <p class="contact-sub">Open to data analyst, data engineer, data scientist, and BI roles. Let's connect.</p>
       <div class="contact-links">
         <a href="https://www.linkedin.com/in/sriram-ganeshalingam" target="_blank" rel="noopener noreferrer" class="contact-btn">
           <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
@@ -1621,7 +1703,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p class="footer-text">Built with pure HTML · CSS · JS &nbsp;·&nbsp; <span style="color:var(--teal)">Sriram Ganeshalingam</span> &copy; 2025</p>
+      <p class="footer-text">Built with pure HTML · CSS · JS &nbsp;·&nbsp; <span style="color:var(--teal)">Sriram Ganeshalingam</span> &copy; 2026</p>
     </div>
   </footer>
 
@@ -1642,7 +1724,7 @@
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
     // ── Typewriter ────────────────────────────────────────────────
-    const roles = ['Data Analyst', 'ML Engineer', 'BI Specialist', 'Data Scientist', 'Analytics Engineer'];
+    const roles = ['Data Analyst', 'Data Engineer', 'BI Specialist', 'Data Scientist', 'Analytics Engineer', 'ML Engineer'];
     let ri = 0, ci = 0, deleting = false;
     const tw = document.getElementById('typewriter-text');
     function type() {
